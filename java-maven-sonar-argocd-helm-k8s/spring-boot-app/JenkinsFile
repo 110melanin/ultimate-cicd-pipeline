@@ -50,7 +50,7 @@ pipeline {
         environment {
             GIT_REPO_NAME = "ultimate-cicd-pipeline"
             GIT_USER_NAME = "110melanin"
-            GITHUB_TOKEN  = "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"
+            GITHUB_TOKEN  = "Ato00447943243273."
         }
         steps {
             withCredentials([string(credentialsId: 'git-api', variable: '${GITHUB_TOKEN}')]) {
