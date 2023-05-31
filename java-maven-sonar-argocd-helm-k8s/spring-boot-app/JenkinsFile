@@ -21,8 +21,8 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://18.169.134.23:9000"
-        SONAR_AUTH_TOKEN = "588e0638bd3e529c41d83cf2b744315ac9ff9125"
+        SONAR_URL = "http://3.8.167.242:9000"
+      
       }
       steps {
         withCredentials([string(credentialsId: 'sonar-api', variable: '${SONAR_AUTH_TOKEN}')]) {
@@ -50,7 +50,7 @@ pipeline {
         environment {
             GIT_REPO_NAME = "ultimate-cicd-pipeline"
             GIT_USER_NAME = "110melanin"
-            GITHUB_TOKEN  = "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"
+            
         }
         steps {
             withCredentials([string(credentialsId: 'git-api', variable: '${GITHUB_TOKEN}')]) {
